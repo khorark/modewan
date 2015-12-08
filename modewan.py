@@ -66,6 +66,9 @@ def main():
 	#выполняем команду 'ifconfig' и записываем результат
 	output = str(subprocess.check_output("ifconfig"))
 	num = (len(re.findall('wlan', output)))
+	if num == 0:
+		print ('Wlan interface is not found you system')
+		exit(0)
 
 	while True:
 		try:
