@@ -68,7 +68,7 @@ def main():
 	num = (len(re.findall('wlan', output)))
 	if num == 0:
 		print ('Wlan interface is not found you system')
-		exit(0)
+		exit(1)
 
 	while True:
 		try:
